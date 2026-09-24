@@ -27,13 +27,16 @@ python3 -m http.server 8000
 - **Root Directory:** `./` (ברירת המחדל)
 - **Build Command / Output Directory / Install Command:** להשאיר ריקים
 
-## אחרי הפריסה — להחליף את כתובת ה-placeholder
+## כתובת האתר
 
-בקבצים יש `https://example.com` בתור מציין מקום. צריך להחליף אותו בכתובת האמיתית
-ב-`index.html`, `privacy.html`, `work/*.html`, `sitemap.xml` ו-`robots.txt`:
+האתר חי בכתובת https://yoav-website-seven.vercel.app
+
+הכתובת הזאת מופיעה בתוך הקבצים (canonical, og:url, og:image, sitemap, robots).
+כשיהיה דומיין אמיתי צריך להחליף אותה בכל הקבצים:
 
 ```bash
-grep -rl 'https://example.com' . | xargs sed -i 's|https://example\.com|https://THE-REAL-DOMAIN|g'
+grep -rl 'https://yoav-website-seven.vercel.app' . --exclude-dir=.git \
+  | xargs sed -i 's|https://yoav-website-seven\.vercel\.app|https://THE-REAL-DOMAIN|g'
 ```
 
-עד שזה נעשה, שיתוף הלינק לא יציג את תמונת התצוגה, וגוגל יקבל כתובות canonical שגויות.
+בלי זה, שיתוף הלינק יציג את תמונת התצוגה של הכתובת הישנה וגוגל יקבל canonical שגוי.
