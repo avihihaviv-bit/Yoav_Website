@@ -769,6 +769,8 @@ html.intro-done #intro{display:none !important}
 /* portfolio */
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:26px}
 @media(max-width:840px){.grid-2{grid-template-columns:1fr}}
+.grid-2.one{grid-template-columns:minmax(0,600px);justify-content:center}
+@media(max-width:840px){.grid-2.one{grid-template-columns:1fr}}
 .proj{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--surface);transition:transform .25s ease}
 .proj:hover{}
 .proj-shot{
@@ -1316,32 +1318,18 @@ try{
   <div class="container">
     <h2 class="section-title reveal">כמה עבודות שיצאו לאוויר</h2>
     <p class="section-sub reveal">חלק מהאתרים שבניתי לאחרונה. לוחצים על "לצפייה באתר" כדי לראות אותם חיים.</p>
-    <div class="grid-2">
+    <div class="grid-2 one">
       <div class="proj reveal led-hover tilt-3d">
-        <div class="proj-shot"><span class="live-badge"><span class="live-dot"></span> LIVE</span><span class="tag mono">kuti-bardugo-yoav.lovable.app</span></div>
+        <div class="proj-shot"><span class="live-badge"><span class="live-dot"></span> LIVE</span><span class="tag mono">sisi-oven-site-naq1.vercel.app</span></div>
         <div class="proj-body">
           <span class="kind mono">עסק מקומי</span>
-          <h3>כותי ברדוגו</h3>
-          <p>דף נחיתה נקי עם מיקוד בהמרה - כפתורי יצירת קשר בולטים ומבנה תוכן ברור.</p>
+          <h3>התנור של סבתא סיסי</h3>
+          <p>אתר לעסק ביתי - מבנה תוכן ברור, עיצוב חם ודרכי יצירת קשר זמינות מכל מקום בעמוד.</p>
           <div class="proj-links">
-            <a class="proj-link" href="https://kuti-bardugo-yoav.lovable.app" target="_blank" rel="noopener">לצפייה באתר
+            <a class="proj-link" href="https://sisi-oven-site-naq1.vercel.app/" target="_blank" rel="noopener">לצפייה באתר
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
             </a>
-            <a class="proj-case" href="work/kuti-bardugo.html">פרטים על העבודה ←</a>
-          </div>
-        </div>
-      </div>
-      <div class="proj reveal led-hover tilt-3d">
-        <div class="proj-shot"><span class="live-badge"><span class="live-dot"></span> LIVE</span><span class="tag mono">grandpa-tambur-store.lovable.app</span></div>
-        <div class="proj-body">
-          <span class="kind mono">חנות</span>
-          <h3>סבא טמבור</h3>
-          <p>אתר חנות עם הצגת מוצרים/שירותים בצורה נעימה וניווט פשוט למשתמש.</p>
-          <div class="proj-links">
-            <a class="proj-link" href="https://grandpa-tambur-store.lovable.app" target="_blank" rel="noopener">לצפייה באתר
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
-            </a>
-            <a class="proj-case" href="work/grandpa-tambur.html">פרטים על העבודה ←</a>
+            <a class="proj-case" href="work/sisi-oven.html">פרטים על העבודה ←</a>
           </div>
         </div>
       </div>
