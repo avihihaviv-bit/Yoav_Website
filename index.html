@@ -681,7 +681,7 @@ html.intro-done #intro{display:none !important}
 
 /* reveal */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease, transform .7s ease}
-.grid-3 .reveal:nth-child(2),.grid-2 .reveal:nth-child(2),.testi-grid .reveal:nth-child(2),.timeline .reveal:nth-child(2){transition-delay:.12s}
+.grid-3 .reveal:nth-child(2),.grid-2 .reveal:nth-child(2),.timeline .reveal:nth-child(2){transition-delay:.12s}
 .grid-3 .reveal:nth-child(3),.timeline .reveal:nth-child(3){transition-delay:.24s}
 .reveal.in{opacity:1;transform:translateY(0)}
 
@@ -796,24 +796,6 @@ html.intro-done #intro{display:none !important}
 .proj-case{font-weight:700;color:var(--cyan);text-decoration:none;font-size:15px}
 .proj-case:hover{text-decoration:underline}
 
-/* testimonials */
-.testi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
-@media(max-width:760px){.testi-grid{grid-template-columns:1fr}}
-.testi-card{border:1px dashed var(--line-strong);border-radius:var(--radius);padding:28px;background:var(--surface);position:relative;overflow:hidden}
-.testi-card::before{
-  content:"”";position:absolute;top:-6px;left:16px;font-family:'Rubik',sans-serif;
-  font-size:80px;font-weight:900;color:var(--gold);opacity:0;transform:scale(.5);
-  line-height:1;pointer-events:none;
-  transition:opacity .6s ease .1s, transform .6s cubic-bezier(.2,.9,.3,1.3) .1s;
-}
-.testi-card.in::before{opacity:.14;transform:scale(1)}
-.stars{color:var(--gold);font-size:15px;letter-spacing:3px;margin-bottom:12px}
-.testi-card .q{font-size:16px;color:var(--text-muted);margin-bottom:16px;font-style:italic}
-.testi-card .who{display:flex;align-items:center;gap:10px}
-.testi-card .avatar{width:38px;height:38px;border-radius:50%;background:var(--bg-alt);border:1px solid var(--line-strong);display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--gold)}
-.testi-card .name{font-weight:700;font-size:14.5px}
-.testi-card .biz{font-size:12.5px;color:var(--text-muted)}
-.testi-note{font-size:13px;color:var(--text-muted);margin-top:18px;font-family:'IBM Plex Mono',monospace}
 
 /* guide list */
 /* pricing */
@@ -1329,33 +1311,7 @@ try{
             <a class="proj-link" href="https://sisi-oven-site-naq1.vercel.app/" target="_blank" rel="noopener">לצפייה באתר
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
             </a>
-            <a class="proj-case" href="work/sisi-oven.html">פרטים על העבודה ←</a>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section id="testimonials">
-  <div class="container">
-    <h2 class="section-title reveal">מה אומרים על העבודה</h2>
-    <div class="testi-grid">
-      <div class="testi-card reveal led-hover tilt-3d">
-        <div class="stars" aria-label="דירוג 5 מתוך 5 כוכבים">★★★★★</div>
-        <p class="q">"יואב הבין בדיוק מה אני צריך. הדף עלה תוך שלושה ימים ומאז הטלפון לא מפסיק לצלצל."</p>
-        <div class="who">
-          <div class="avatar mono">כב</div>
-          <div><div class="name">כותי ברדוגו</div><div class="biz">מספרה ביתית · תל אביב</div></div>
-        </div>
-      </div>
-      <div class="testi-card reveal led-hover tilt-3d">
-        <div class="stars" aria-label="דירוג 5 מתוך 5 כוכבים">★★★★★</div>
-        <p class="q">"עבודה מקצועית, מהירה ובמחיר הוגן. אנשים אומרים שהאתר נראה כמו של רשת גדולה."</p>
-        <div class="who">
-          <div class="avatar mono">מט</div>
-          <div><div class="name">משפחת טמבור</div><div class="biz">כל בו טמבור 2000</div></div>
         </div>
       </div>
     </div>
@@ -1724,7 +1680,7 @@ document.querySelectorAll('.nav-jump').forEach(btn=>{
 
 // active nav button on scroll - a section stays "active" from its own
 // heading until the next linked section's heading, even across any
-// unlinked content in between (e.g. before-after/testimonials/guide).
+// unlinked content in between (e.g. before-after/guide).
 const navLinks = document.querySelectorAll('.nav-links .nav-jump');
 const navSections = Array.from(navLinks).map(b=>document.querySelector(b.dataset.target)).filter(Boolean);
 const navStrip = document.getElementById('navLinks');
